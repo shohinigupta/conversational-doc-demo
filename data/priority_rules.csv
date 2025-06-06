@@ -1,0 +1,17 @@
+rule_type,rule_key,points,condition_field,condition_value
+task_category,Clinical Stability,3,,
+task_category,Medication Adherence,3,,
+task_category,Social Stability,2,,
+task_category,External Clinicians,2,,
+task_category,Individual Agency,1,,
+keyword,safety plan,5,,
+keyword,relapse,5,,
+keyword,warning signs,5,,
+keyword,crisis,5,,
+patient_trait,hospitalization_last_30_days,5,,
+patient_trait,no_contact_last_45_days,4,,
+patient_trait,medication_adherence_poor,4,,
+patient_trait,unhoused,3,,
+patient_trait,transportation_access_no,2,,
+patient_trait,days_engaged_under_30,2,,
+patient_trait,medication_adherence_poor,2,primary_bh_diagnosis,schizophrenia

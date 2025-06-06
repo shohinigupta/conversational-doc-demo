@@ -1,0 +1,21 @@
+Patient ID,Patient Name,Task,Predicted Category,Priority Rank,Priority Label,Priority Score,Patient Factors
+11,Daniel Quinn,Educate patient about importance of regular PCP visits,External Clinicians,1,Critical,17,medication_adherence=poor
+3,Michael Jenkins,Address patient concerns about diabetes management medication,Medication Adherence,1,Critical,11,medication_adherence=poor
+26,Christopher Kane,Help patient set up paratransit services,Social Stability,1,Critical,10,
+44,Emily Garrett,Help patient set up medication reminders on smartphone,Medication Adherence,2,High,9,medication_adherence=poor
+23,Karen Allen MD,Schedule peer visit to check in after missed appointments,Clinical Stability,2,High,8,
+25,Brenda Gomez,Discuss impact of stopping medication suddenly without provider input,Medication Adherence,2,High,7,
+20,Marc Hoffman,Coach patient on discussing symptoms with psychiatrist,Clinical Stability,2,High,7,
+28,Jack Martinez,Educate patient about importance of regular PCP visits,External Clinicians,2,High,7,
+13,Barbara Schwartz,Discuss harm reduction strategies for substance use,Social Stability,2,High,7,
+40,Lauren Juarez,Assist patient with arranging transportation for medical appointments,Social Stability,3,Medium,5,
+41,Dennis Ball,Assist patient in gathering ID and insurance documents,Social Stability,3,Medium,5,
+50,Frank Perez,Support patient in applying for Section 8 housing voucher,Social Stability,3,Medium,5,
+18,Anna Sullivan,Help patient set up paratransit services,Social Stability,3,Medium,5,
+17,Stephen Benjamin,Support patient in setting personal recovery goals,Individual Agency,3,Medium,4,
+19,Daniel Stuart,Assist patient in gathering ID and insurance documents,Social Stability,4,Low,3,
+45,Jaime Bailey,Assist patient in gathering ID and insurance documents,Social Stability,4,Low,3,
+7,Justin Gonzalez,Connect patient with MAT (Medication-Assisted Treatment) program if interested,Social Stability,4,Low,3,
+47,Charles Andrade,Support patient in setting personal recovery goals,Individual Agency,4,Low,3,
+6,Alexandra Woods DDS,Educate patient about importance of regular PCP visits,External Clinicians,4,Low,2,
+15,Adrian Paul,Support patient in setting personal recovery goals,Individual Agency,4,Low,1,

@@ -1,0 +1,101 @@
+Number,Task,risk_factor_stage
+1,Conduct initial welcome call to introduce peer support services,Individual Agency
+2,"Complete initial assessment of immediate needs (housing, food, medication)",Social Stability
+3,Help patient create a personal crisis contact list,Clinical Stability
+4,Discuss past experiences with mental health services to identify preferences,Individual Agency
+5,"Assist with gathering essential documents (ID, insurance cards, etc.)",Social Stability
+6,Introduce patient to clinic staff and explain each person's role,Community Providers
+7,Explain peer specialist role and establish communication preferences,Individual Agency
+8,Ask about preferred communication methods and frequency,Individual Agency
+9,Listen to patient's personal recovery story and goals,Individual Agency
+10,Explain confidentiality and limitations,Individual Agency
+11,Provide tour of clinic facilities in person or virtually,Community Providers
+12,Discuss patient rights and grievance procedures,Individual Agency
+13,Help register for patient portal access,Community Providers
+14,Explain what to expect during psychiatric evaluation,Clinical Stability
+15,Address concerns about taking antipsychotics like Risperdal,Medication Adherence
+16,Discuss fears about medication side effects,Medication Adherence
+17,Explain the difference between Abilify oral and Abilify Maintena LAI,Medication Adherence
+18,Set expectations about recovery timeline and journey,Clinical Stability
+19,Discuss experiences with previous providers,Community Providers
+20,Help patient identify personal strengths and resources,Individual Agency
+21,Introduce concept of recovery groups available locally,Social Stability
+22,Explain purpose of safety planning and when it's used,Clinical Stability
+23,Validate patient's concerns about stigma,Individual Agency
+24,Discuss privacy concerns around mental health treatment,Individual Agency
+25,Explain benefits of LAI medications for those who struggle with daily pills,Medication Adherence
+26,Provide education materials in patient's preferred format,Individual Agency
+27,Help schedule psychiatrist appointment for medication review,Community Providers
+28,Assist with transportation arrangement for Clozapine monitoring bloodwork,Medication Adherence
+29,Check if patient has filled Olanzapine prescription,Medication Adherence
+30,Follow up after missed Invega Sustenna LAI appointment,Medication Adherence
+31,Help establish morning medication routine for multiple medications,Medication Adherence
+32,Contact pharmacy about Seroquel authorization issue,Medication Adherence
+33,Schedule appointment with primary care physician for metabolic monitoring,Community Providers
+34,Arrange transportation to endocrinologist for diabetes management,Community Providers
+35,Coordinate with case manager about housing application status,Social Stability
+36,Assist with applying for SNAP benefits,Social Stability
+37,Contact utility company about assistance program,Social Stability
+38,Check in about sleep quality since starting Seroquel,Clinical Stability
+39,Follow up about side effects after recent Haldol dosage increase,Medication Adherence
+40,Create medication tracking system for complex regimen,Medication Adherence
+41,Call to remind about upcoming Abilify Maintena injection,Medication Adherence
+42,Help coordinate between psychiatric and primary care medication lists,Medication Adherence
+43,Check if patient needs Latuda prescription refilled,Medication Adherence
+44,Conduct post-hospitalization follow-up check-in,Clinical Stability
+45,Help organize documentation for disability application,Social Stability
+46,Assist with finding stable housing resources,Social Stability
+47,Schedule lab work for lithium level monitoring,Medication Adherence
+48,Connect with intensive case manager about recent missed appointments,Community Providers
+49,Develop initial safety plan for suicidal ideation,Clinical Stability
+50,Practice identifying early warning signs of decompensation,Clinical Stability
+51,Coordinate with substance use counselor for dual diagnosis support,Community Providers
+52,Help schedule vision exam to monitor for Risperdal-induced changes,Community Providers
+53,Connect to peer support group for medication experiences,Social Stability
+54,Provide education about recognizing EPS symptoms with typical antipsychotics,Clinical Stability
+55,Teach grounding techniques for anxiety management,Clinical Stability
+56,Develop plan for managing weight gain on Zyprexa,Clinical Stability
+57,Help establish connection with local NAMI chapter,Social Stability
+58,Assist with applying for transportation assistance program,Social Stability
+59,Create weekly appointment schedule with reminders,Community Providers
+60,Follow up about experience with new psychiatrist,Community Providers
+61,Check if patient liked their new primary care doctor,Community Providers
+62,Contact dental clinic that accepts Medicaid,Community Providers
+63,Help schedule appointment with neurologist for movement disorder evaluation,Community Providers
+64,Coordinate with therapist about CBT for psychosis sessions,Community Providers
+65,Review crisis response protocol after recent SI episode,Clinical Stability
+66,Check food and housing security status,Social Stability
+67,Guide patient to independently refill Aripiprazole prescription,Medication Adherence
+68,Help develop personal system for tracking LAI appointment schedule,Medication Adherence
+69,Practice self-advocacy skills for upcoming specialist appointment,Individual Agency
+70,Create personalized relapse prevention plan,Clinical Stability
+71,Develop independent strategies for managing Risperidone-related side effects,Medication Adherence
+72,Teach how to self-monitor for warning signs of psychosis,Clinical Stability
+73,Practice how to effectively communicate medication concerns to psychiatrist,Individual Agency
+74,Help identify personal wellness goals beyond symptom management,Individual Agency
+75,Guide patient through insurance benefits explanation,Social Stability
+76,Develop budget that includes medication copays,Social Stability
+77,Create medication routine that patient can maintain independently,Medication Adherence
+78,Teach how to prepare questions before doctor appointments,Individual Agency
+79,Practice skills for discussing LAI preferences with provider,Individual Agency
+80,Help create sustainable exercise plan that addresses Clozapine weight gain,Clinical Stability
+81,Connect with vocational rehabilitation services,Social Stability
+82,Practice social skills for community integration,Social Stability
+83,Help develop sleep hygiene routine to complement medication,Clinical Stability
+84,Guide creation of personal wellness toolbox,Clinical Stability
+85,Support patient in leading their own treatment planning meeting,Individual Agency
+86,Help identify supportive people for recovery network,Social Stability
+87,Practice strategies for managing stigma in workplace/community,Individual Agency
+88,Develop personal crisis de-escalation techniques,Clinical Stability
+89,Teach how to track mood patterns in relation to medication,Clinical Stability
+90,Support transition to independently attending recovery group,Social Stability
+91,Help develop skills for explaining mental health needs to family,Individual Agency
+92,Create sustainable plan for attending follow-up appointments,Community Providers
+93,Develop strategies for medication adherence during routine disruptions,Medication Adherence
+94,Guide through self-assessment of treatment progress,Individual Agency
+95,Practice recognizing and responding to suicidal thoughts independently,Clinical Stability
+96,Support development of meaningful daily structure,Clinical Stability
+97,Help create maintenance plan for continued recovery,Individual Agency
+98,Teach skills for independently accessing community resources,Social Stability
+99,Support gradual reduction in frequency of peer specialist support,Individual Agency
+100,Develop graduation plan from intensive case management,Individual Agency

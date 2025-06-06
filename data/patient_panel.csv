@@ -1,0 +1,51 @@
+patient_id,patient_name,primary_bh_diagnosis,primary_clinical_diagnosis,high_utilizer,unhoused,transportation_access,has_pcp,hospitalization_last_30_days,medication_adherence,days_engaged,no_contact_last_45_days,primary_substance_use,suicidal_ideation_risk
+001,Eric Henson,schizophrenia,hypertension,no,no,yes,no,no,poor,257,no,none,null
+002,Crystal Phillips,bipolar,hypertension,no,no,yes,yes,no,good,20,no,none,recent
+003,Michael Jenkins,schizophrenia,diabetes,no,no,yes,no,no,poor,163,no,none,null
+004,Matthew Mccarthy,mdd,diabetes,yes,no,yes,yes,no,poor,64,no,none,null
+005,Paul Anderson,bipolar,hyperlipidemia,no,no,yes,yes,no,good,319,no,cannabis,null
+006,Alexandra Woods DDS,schizophrenia,copd,yes,no,yes,yes,no,good,100,no,none,null
+007,Justin Gonzalez,schizophrenia,ckd,no,no,yes,yes,no,fair,127,no,alcohol,null
+008,Matthew Castillo,mdd,diabetes,no,no,yes,yes,no,fair,320,no,opioids,null
+009,Beth Lee,bipolar,diabetes,no,no,yes,yes,no,good,134,no,none,recent
+010,Lisa Phillips,bipolar,hypertension,no,no,yes,yes,no,good,65,no,none,null
+011,Daniel Quinn,mdd,hypertension,no,no,no,yes,yes,poor,54,yes,none,null
+012,Matthew Martinez,mdd,diabetes,no,no,yes,yes,no,fair,119,no,alcohol,null
+013,Barbara Schwartz,mdd,hyperlipidemia,no,no,yes,yes,no,good,75,yes,cannabis,null
+014,Darlene Harris,bipolar,diabetes,no,no,yes,no,no,good,68,no,alcohol,null
+015,Adrian Paul,mdd,diabetes,yes,no,yes,no,no,good,91,no,none,recent
+016,Russell Weiss,schizophrenia,hyperlipidemia,no,no,yes,yes,no,good,247,no,none,recent
+017,Stephen Benjamin,schizophrenia,diabetes,no,yes,yes,yes,no,good,374,no,none,recent
+018,Anna Sullivan,mdd,hypertension,no,no,no,yes,no,good,264,no,none,null
+019,Daniel Stuart,mdd,hypertension,yes,no,yes,yes,no,good,289,no,none,null
+020,Marc Hoffman,mdd,diabetes,no,yes,yes,yes,no,good,92,no,none,null
+021,Austin Thompson,bipolar,hyperlipidemia,yes,no,no,yes,no,good,69,no,none,recent
+022,Richard Ward,schizophrenia,copd,yes,no,yes,yes,no,poor,7,no,cannabis,null
+023,Karen Allen MD,schizophrenia,hypertension,no,no,yes,yes,no,good,92,yes,none,recent
+024,Breanna Patel,schizophrenia,hyperlipidemia,no,no,no,yes,no,fair,211,no,alcohol,null
+025,Brenda Gomez,mdd,copd,no,no,yes,yes,no,fair,19,no,none,null
+026,Christopher Kane,mdd,diabetes,no,no,no,no,yes,good,262,no,stimulants,null
+027,Robert Garcia,schizophrenia,hypertension,no,no,yes,no,no,good,108,no,stimulants,recent
+028,Jack Martinez,bipolar,copd,no,yes,no,yes,no,good,223,no,stimulants,null
+029,Kevin Richards,schizophrenia,copd,no,no,no,yes,yes,fair,340,no,none,active
+030,Dana Webb,bipolar,hypertension,no,no,yes,yes,no,good,153,no,alcohol,recent
+031,Sandra Mcgee,mdd,hyperlipidemia,no,no,yes,yes,no,good,256,no,none,active
+032,Brian Brown,schizophrenia,copd,no,no,yes,yes,yes,poor,69,yes,stimulants,null
+033,Daniel Barber,mdd,diabetes,no,no,yes,yes,no,good,214,no,opioids,recent
+034,Paula Pratt,schizophrenia,hyperlipidemia,no,yes,yes,yes,no,good,389,no,none,recent
+035,Anna Garcia MD,mdd,hypertension,no,no,yes,no,no,good,28,yes,none,null
+036,Taylor Little,bipolar,ckd,yes,no,yes,yes,no,fair,83,no,none,null
+037,Isaac Davidson,mdd,diabetes,yes,no,yes,no,no,good,7,yes,cannabis,null
+038,Joshua Crosby,mdd,hyperlipidemia,yes,no,yes,yes,no,good,27,no,opioids,null
+039,Julie Long,schizophrenia,asthma,no,no,yes,yes,no,good,124,no,none,null
+040,Lauren Juarez,bipolar,copd,yes,no,no,yes,no,fair,167,no,alcohol,recent
+041,Dennis Ball,bipolar,hypertension,no,no,yes,yes,no,fair,28,no,none,null
+042,Charles Allison,schizophrenia,diabetes,yes,no,yes,yes,no,good,254,no,opioids,null
+043,Michael Long,schizophrenia,diabetes,no,yes,no,yes,yes,good,305,no,none,recent
+044,Emily Garrett,mdd,hypertension,no,no,yes,yes,no,poor,248,no,none,null
+045,Jaime Bailey,bipolar,asthma,no,no,yes,yes,no,good,119,no,none,recent
+046,Justin Mckenzie,schizophrenia,diabetes,no,no,no,yes,no,good,339,no,none,null
+047,Charles Andrade,bipolar,diabetes,no,no,yes,yes,no,good,23,no,stimulants,recent
+048,Michelle Salas,mdd,hypertension,no,no,no,yes,no,fair,36,no,alcohol,null
+049,John Trujillo,schizophrenia,hypertension,no,no,yes,no,yes,good,12,no,none,null
+050,Frank Perez,mdd,diabetes,no,no,yes,yes,no,good,24,no,opioids,recent

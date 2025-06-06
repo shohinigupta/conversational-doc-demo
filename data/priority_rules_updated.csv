@@ -1,0 +1,17 @@
+rule_id,task_category,keyword,patient_field,patient_field_operator,patient_field_value,points,condition_field,condition_value
+1,Clinical Stability,,,,,4,,
+2,Medication Adherence,,,,,5,,
+3,Social Stability,,,,,3,,
+4,External Clinicians,,,,,2,,
+5,Individual Agency,,,,,1,,
+6,,safety plan,,,,5,,
+7,,relapse,,,,5,,
+8,,warning signs,,,,5,,
+9,,crisis,,,,5,,
+10,,,hospitalization_last_30_days,==,yes,5,,
+11,,,no_contact_last_45_days,==,yes,4,,
+12,,,medication_adherence,==,poor,4,,
+13,,,unhoused,==,yes,3,,
+14,,,transportation_access,==,no,2,,
+15,,,days_engaged,<,30,2,,
+16,,,medication_adherence,==,poor,2,primary_bh_diagnosis,schizophrenia
