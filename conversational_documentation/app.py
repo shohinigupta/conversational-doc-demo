@@ -1,5 +1,5 @@
 import streamlit as st
-from llm import ask_ollama, get_structured_prompt
+from llm import ask_llm, get_structured_prompt
 
 st.set_page_config(page_title="Conversational Documentation Demo", layout="centered")
 
@@ -32,7 +32,7 @@ if submitted and user_input:
 
     with st.spinner("helpinghand coach is analyzing your note..."):
         prompt = get_structured_prompt(user_input, phase=phase)
-        llm_response = ask_ollama(prompt)
+        llm_response = ask_llm(prompt)
 
     st.session_state.messages.append(("helpinghand coach", llm_response))
 
@@ -52,7 +52,7 @@ if st.session_state.messages:
 
             with st.spinner("helpinghand coach is analyzing your follow-up response..."):
                 prompt = get_structured_prompt(st.session_state.final_note, phase=phase)
-                new_response = ask_ollama(prompt)
+                new_response = ask_llm(prompt)
 
             st.session_state.messages.append(("helpinghand coach", new_response))
 
