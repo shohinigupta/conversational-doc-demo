@@ -3,9 +3,9 @@ __pycache__/
 .DS_Store
 
 # Allow this specific CSV file
-!conversational_documentation/
-!conversational_documentation/structured_fields.csv
-*.csv
+#!conversational_documentation/
+#!conversational_documentation/structured_fields.csv
+#*.csv
 
 *.sqlite3
 
