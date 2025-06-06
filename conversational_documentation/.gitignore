@@ -3,4 +3,6 @@ __pycache__/
 .DS_Store
 *.csv
 *.sqlite3
-*.streamlit/secrets.toml
+
+# Properly ignore secrets.toml anywhere
+**/secrets.toml
