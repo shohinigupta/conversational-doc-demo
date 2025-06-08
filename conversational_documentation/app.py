@@ -1,16 +1,74 @@
 import streamlit as st
 from llm import ask_llm, get_structured_prompt
 
+# Define fake patient data
+PATIENTS = [
+    {
+        "name": "Tony J.",
+        "phase": "newly_engaged",
+        "primary_diagnosis": "Schizoaffective disorder",
+        "recent_hospitalization": True
+    },
+    {
+        "name": "Maria L.",
+        "phase": "ongoing",
+        "primary_diagnosis": "Major depressive disorder",
+        "recent_hospitalization": False
+    },
+    {
+        "name": "James K.",
+        "phase": "at_risk",
+        "primary_diagnosis": "Bipolar disorder",
+        "recent_hospitalization": True
+    },
+    {
+        "name": "Sarah M.",
+        "phase": "ongoing",
+        "primary_diagnosis": "Generalized anxiety disorder",
+        "recent_hospitalization": False
+    },
+    {
+        "name": "David R.",
+        "phase": "newly_engaged",
+        "primary_diagnosis": "Post-traumatic stress disorder",
+        "recent_hospitalization": False
+    }
+]
+
+# Phase display mapping
+PHASE_DISPLAY = {
+    "newly_engaged": "Newly Engaged",
+    "ongoing": "Ongoing Care",
+    "at_risk": "At Risk"
+}
+
 st.set_page_config(page_title="Conversational Documentation Demo", layout="centered")
 
 st.title("📝 Visit Note Assistant")
 
-# Add phase selection
-phase = st.selectbox(
-    "Select patient phase:",
-    ["all", "newly_engaged", "ongoing", "at_risk"],
-    index=0
+# Format patient options for dropdown
+patient_options = [
+    f"{p['name']} — {PHASE_DISPLAY[p['phase']]} | {p['primary_diagnosis']} | {'Recent Hospitalization' if p['recent_hospitalization'] else 'No Recent Hospitalization'}"
+    for p in PATIENTS
+]
+
+# Add patient selection
+selected_patient_idx = st.selectbox(
+    "Select patient:",
+    range(len(PATIENTS)),
+    format_func=lambda x: patient_options[x]
 )
+
+# Display selected patient metadata
+selected_patient = PATIENTS[selected_patient_idx]
+st.markdown("---")
+st.markdown("**Selected Patient Information:**")
+st.markdown(f"""
+- **Name:** {selected_patient['name']}
+- **Phase:** {PHASE_DISPLAY[selected_patient['phase']]}
+- **Primary Diagnosis:** {selected_patient['primary_diagnosis']}
+- **Recent Hospitalization:** {'Yes' if selected_patient['recent_hospitalization'] else 'No'}
+""")
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -31,7 +89,7 @@ if submitted and user_input:
     st.session_state.rounds = 0
 
     with st.spinner("helpinghand coach is analyzing your note..."):
-        prompt = get_structured_prompt(user_input, phase=phase)
+        prompt = get_structured_prompt(user_input, phase=selected_patient['phase'])
         llm_response = ask_llm(prompt)
 
     st.session_state.messages.append(("helpinghand coach", llm_response))
@@ -51,7 +109,7 @@ if st.session_state.messages:
             st.session_state.rounds += 1
 
             with st.spinner("helpinghand coach is analyzing your follow-up response..."):
-                prompt = get_structured_prompt(st.session_state.final_note, phase=phase)
+                prompt = get_structured_prompt(st.session_state.final_note, phase=selected_patient['phase'])
                 new_response = ask_llm(prompt)
 
             st.session_state.messages.append(("helpinghand coach", new_response))
