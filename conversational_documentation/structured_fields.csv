@@ -1,5 +1,4 @@
 field_name,phase,instructions
-reason_for_visit,all,"What was the main topic of conversation during the visit?"
 medication_changes,ongoing,"Have there been any changes to prescribed medications, routines for taking medications, or new unmanageable side effects?"
 housing_status,newly_engaged,"Describe current housing situation."
 social_support,all,"Is there a friend or family member that helps this patient take medications, get to appointments and overall provide emotional support?"

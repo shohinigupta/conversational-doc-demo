@@ -1,46 +1,7 @@
 import streamlit as st
 from llm import ask_llm, get_structured_prompt
-
-# Define fake patient data
-PATIENTS = [
-    {
-        "name": "Tony J.",
-        "phase": "newly_engaged",
-        "primary_diagnosis": "Schizoaffective disorder",
-        "recent_hospitalization": True
-    },
-    {
-        "name": "Maria L.",
-        "phase": "ongoing",
-        "primary_diagnosis": "Major depressive disorder",
-        "recent_hospitalization": False
-    },
-    {
-        "name": "James K.",
-        "phase": "at_risk",
-        "primary_diagnosis": "Bipolar disorder",
-        "recent_hospitalization": True
-    },
-    {
-        "name": "Sarah M.",
-        "phase": "ongoing",
-        "primary_diagnosis": "Generalized anxiety disorder",
-        "recent_hospitalization": False
-    },
-    {
-        "name": "David R.",
-        "phase": "newly_engaged",
-        "primary_diagnosis": "Post-traumatic stress disorder",
-        "recent_hospitalization": False
-    }
-]
-
-# Phase display mapping
-PHASE_DISPLAY = {
-    "newly_engaged": "Newly Engaged",
-    "ongoing": "Ongoing Care",
-    "at_risk": "At Risk"
-}
+from example_notes import example_notes
+from patient_data import PATIENTS, PHASE_DISPLAY
 
 st.set_page_config(page_title="Conversational Documentation Demo", layout="centered")
 
@@ -76,11 +37,39 @@ if "final_note" not in st.session_state:
     st.session_state.final_note = ""
 if "rounds" not in st.session_state:
     st.session_state.rounds = 0
+if "current_note" not in st.session_state:
+    st.session_state.current_note = ""
 
 MAX_ROUNDS = 1
 
+# Filter sample notes for the selected patient
+patient_name = selected_patient['name']
+relevant_notes = {
+    k: v for k, v in example_notes.items() 
+    if k.startswith(patient_name)
+}
+
+# Add sample note selector outside the form
+selected_sample = st.selectbox(
+    "Try a sample note:",
+    ["Select a sample..."] + list(relevant_notes.keys())
+)
+
+# Update current note when a sample is selected
+if selected_sample != "Select a sample...":
+    st.session_state.current_note = relevant_notes[selected_sample]
+
 with st.form("visit_form"):
-    user_input = st.text_area("Enter visit summary (free-text):", height=200)
+    user_input = st.text_area(
+        "Enter visit summary (free-text):",
+        value=st.session_state.current_note,
+        height=200
+    )
+    
+    # Update the current note in session state when user types
+    if user_input != st.session_state.current_note:
+        st.session_state.current_note = user_input
+    
     submitted = st.form_submit_button("Submit")
 
 if submitted and user_input:
