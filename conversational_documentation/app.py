@@ -96,12 +96,7 @@ if st.session_state.messages:
         if st.button("Submit follow-up response"):
             st.session_state.final_note += "\n" + followup_response
             st.session_state.rounds += 1
-
-            with st.spinner("helpinghand coach is analyzing your follow-up response..."):
-                prompt = get_structured_prompt(st.session_state.final_note, phase=selected_patient['phase'])
-                new_response = ask_llm(prompt)
-
-            st.session_state.messages.append(("helpinghand coach", new_response))
+            st.session_state.messages.append(("helpinghand coach", "Thank you for the additional information. Let me review the complete note."))
 
 # Final note display
 if st.session_state.rounds >= MAX_ROUNDS or (
