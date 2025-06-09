@@ -35,8 +35,16 @@ def get_structured_prompt(visit_text, patient):
     Returns:
     - messages (list): List of messages for use with Anthropic chat API.
     """
-    # Load structured fields
-    structured_fields_df = pd.read_csv("structured_fields.csv")
+    # Load structured fields with error handling
+    try:
+        csv_path = os.path.join(os.path.dirname(__file__), "structured_fields.csv")
+        structured_fields_df = pd.read_csv(csv_path)
+    except FileNotFoundError:
+        st.error(f"Could not find structured_fields.csv at {csv_path}")
+        return None
+    except Exception as e:
+        st.error(f"Error loading structured_fields.csv: {str(e)}")
+        return None
     
     # Debug: Show the loaded structured fields
     # st.write("Debug - Loaded Structured Fields:")

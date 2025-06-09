@@ -1,11 +1,20 @@
 import streamlit as st
 import pandas as pd
+import os
 from llm import ask_llm, get_structured_prompt
 from example_notes import example_notes
 from patient_data import PATIENTS, PHASE_DISPLAY
 
-# Load the structured rules from file
-rules_df = pd.read_csv("structured_fields.csv")
+# Load structured rules with error handling
+try:
+    csv_path = os.path.join(os.path.dirname(__file__), "structured_fields.csv")
+    rules_df = pd.read_csv(csv_path)
+except FileNotFoundError:
+    st.error(f"Could not find structured_fields.csv at {csv_path}")
+    st.stop()
+except Exception as e:
+    st.error(f"Error loading structured_fields.csv: {str(e)}")
+    st.stop()
 
 st.set_page_config(page_title="Conversational Documentation Demo", layout="centered")
 
