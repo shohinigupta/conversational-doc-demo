@@ -14,32 +14,32 @@ PHASE_DISPLAY = {
 PATIENTS = [
     {
         "name": "Tony J.",
-        "phase": "newly_engaged",
+        "engagement_phase": "newly_engaged",
         "primary_diagnosis": "Schizoaffective disorder",
-        "recent_hospitalization": True
+        "flags": ["recent_hospitalization"]
     },
     {
         "name": "Maria L.",
-        "phase": "ongoing",
+        "engagement_phase": "ongoing",
         "primary_diagnosis": "Major depressive disorder",
-        "recent_hospitalization": False
+        "flags": []
     },
     {
         "name": "James K.",
-        "phase": "at_risk",
+        "engagement_phase": "ongoing",
         "primary_diagnosis": "Bipolar disorder",
-        "recent_hospitalization": True
+        "flags": ["recent_hospitalization"]
     },
     {
         "name": "Sarah M.",
-        "phase": "ongoing",
+        "engagement_phase": "ongoing",
         "primary_diagnosis": "Generalized anxiety disorder",
-        "recent_hospitalization": False
+        "flags": []
     },
     {
         "name": "David R.",
-        "phase": "newly_engaged",
+        "engagement_phase": "newly_engaged",
         "primary_diagnosis": "Post-traumatic stress disorder",
-        "recent_hospitalization": False
+        "flags": []
     }
 ] 

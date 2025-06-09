@@ -1,11 +1,11 @@
-import pandas as pd
 import os
-from utils import build_structured_followup_prompt
-import anthropic  # Replace this if you're still using ollama
-
+import pandas as pd
 import streamlit as st
+from anthropic import Anthropic
+from utils import build_structured_followup_prompt
 
-client = anthropic.Anthropic(api_key=st.secrets["ANTHROPIC_API_KEY"])
+# Initialize Anthropic client
+client = Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
 def ask_llm(prompt_messages):
     # Extract the system prompt (first message)
@@ -24,7 +24,58 @@ def ask_llm(prompt_messages):
 
     return response.content[0].text
 
-def get_structured_prompt(visit_text, phase="all"):
-    csv_path = os.path.join(os.path.dirname(__file__), "structured_fields.csv")
-    structured_fields_df = pd.read_csv(csv_path)
-    return build_structured_followup_prompt(visit_text, structured_fields_df, phase=phase)
+def get_structured_prompt(visit_text, patient):
+    """
+    Get structured prompt for the LLM based on visit text and patient phase.
+    
+    Parameters:
+    - visit_text (str): Free-text note from the care team.
+    - patient (dict): Dictionary containing patient information.
+    
+    Returns:
+    - messages (list): List of messages for use with Anthropic chat API.
+    """
+    # Load structured fields
+    structured_fields_df = pd.read_csv("structured_fields.csv")
+    
+    # Debug: Show the loaded structured fields
+    # st.write("Debug - Loaded Structured Fields:")
+    # st.write(structured_fields_df)
+    
+    # Debug: Show what we're sending to the LLM
+    # st.write("Debug - LLM Input:")
+    # st.write(f"Visit Text: {visit_text}")
+    # st.write(f"Patient Info: {patient}")
+    
+    # Build the prompt
+    messages = build_structured_followup_prompt(visit_text, structured_fields_df, patient)
+    
+    # Debug: Show the full prompt
+    # st.write("Debug - Full LLM Prompt:")
+    # st.write("System Message:")
+    # st.write(messages[0]["content"])
+    # st.write("User Message:")
+    # st.write(messages[1]["content"])
+    
+    return messages
+
+def get_llm_response(messages):
+    """
+    Get response from the LLM.
+    
+    Parameters:
+    - messages (list): List of messages for use with Anthropic chat API.
+    
+    Returns:
+    - str: LLM response.
+    """
+    try:
+        response = client.messages.create(
+            model="claude-3-sonnet-20240229",
+            max_tokens=1000,
+            messages=messages
+        )
+        return response.content[0].text
+    except Exception as e:
+        st.error(f"Error calling LLM: {str(e)}")
+        return None
